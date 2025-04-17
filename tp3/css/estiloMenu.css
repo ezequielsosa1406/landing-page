@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: #ffffff;
+    color: #000;
+  }
+  
+  header {
+    background: linear-gradient(to right, #141414, #0ad336);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  
+
+  .hamburger {
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  .navbar {
+    display: none;
+  }
+  
+  .navbar.show {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #141414;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    padding: 10px 0;
+  }
+  
+  .navbar ul li {
+    margin: 10px 0;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .navbar ul li a:hover {
+    color: #0ad336;
+  }
+  
+  .titulo {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 28px;
+    color: #080808;
+  }
+  
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+  }
+  
+  .producto {
+    background: linear-gradient(to right, #141414, #0b41d6);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .producto:hover {
+    transform: scale(1.05);
+  }
+  
+  .producto img {
+    width: 100%;
+    max-width: 200px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .producto h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .producto p {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .estrellas {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .estrella:hover,
+  .estrella.hovered,
+  .estrella.seleccionada {
+    color: gold;
+  } 
+  
+  .ver-producto {
+    margin-top: 15px;
+    background-color: #0ad336;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ver-producto:hover {
+    background-color: #08b32c;
+  }
+  
+  
+  
+  /* 🔽 RESPONSIVE - para celulares */
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .hamburger {
+      font-size: 26px;
+    }
+  
+    .titulo {
+      font-size: 24px;
+      padding: 0 10px;
+      text-align: center;
+    }
+  
+    .navbar ul li a {
+      font-size: 16px;
+    }
+  
+    .producto img {
+      height: 140px;
+    }
+  
+    .producto h2 {
+      font-size: 18px;
+    }
+  
+    .producto p {
+      font-size: 16px;
+    }
+  
+    .producto {
+      padding: 15px;
+    }
+  
+    .productos-grid {
+      grid-template-columns: 1fr;
+      padding: 10px;
+    }
+  }
+  

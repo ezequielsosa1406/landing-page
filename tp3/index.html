@@ -3,28 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Meleze.</title>
     <link rel="stylesheet" href="css/estilo.css">
-    <title></title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
     <main>
         <section class="tarjeta">
-            <div class="logo_container">fusion</div>
-                <section class="login_user">
-                    <p><input type="text" placeholder="User"></p>
-                    <p><input type="password" placeholder="Password"></p>
-
-                    <p><button type="submit">Login </button></p>
-                    <a href="menu.html"> no tienes cuenta? <span>Registrate</span></a>
-
-
-
-                </section>
-
+            <div class="logo_container">Meleze.</div>
+            <section class="login_user">
+                <input type="text" id="usuario" placeholder="Usuario" />
+                <input type="password" id="contrasena" placeholder="Contraseña" />
+                <button type="button" onclick="iniciarSesion()">Ingresar</button>
+                <p class="registro_texto">
+                    ¿No tienes cuenta? <a href="#"><span>Regístrate</span></a>
+                </p>
+            </section>
 
         </section>
     </main>
-    
+    <script>
+        function iniciarSesion() {
+            const usuario = document.getElementById('usuario').value.trim();
+            const contrasena = document.getElementById('contrasena').value.trim();
+
+            if (usuario !== '' && contrasena !== '') {
+                window.location.href = "menu.html";
+            } else {
+                alert("Por favor, completa ambos campos para ingresar.");
+            }
+        }
+    </script>
 </body>
 </html>
