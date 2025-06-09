@@ -1,23 +1,85 @@
-.portafolio{
-    padding: 2rem;
-    background-color: #46dcf7;
-    text-align: left;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.tarjeta{
-    padding: 2rem;
-    background-color: #d8c245;
-    text-align: left;
-    border: solid ;
-    width: 50px;
-    height: 50px;
-    margin-bottom: 20px;
-    font-size: 30px;
-    text-align: center;
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.contenido{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row
+.portafolio-header {
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.portafolio-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.portafolio-header span {
+  color: #ffe082;
+}
+
+.portafolio-header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.contenido {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta a {
+  text-decoration: none;
+  color: #0097a7;
+}
+
+.tarjeta h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.tarjeta p {
+  font-size: 1rem;
+  color: #555;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: auto;
 }
